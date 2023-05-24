@@ -24,9 +24,43 @@ fillButton(9, "O");
  * Add your code here, since this is going to be your main function
  * That interacts with the UI
  */
+let gameReset = ["", "", "", "", "", "", "", "", ""];
+
+const winningBlocks = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [1, 4, 7],
+  [2, 5, 8],
+  [3, 6, 9],
+  [1, 5, 9],
+  [3, 5, 7]
+];
+
+function alertMsg() {
+  if (winningBlocks )
+}
+
 function clickButton(index) {
   console.log(`Button number ${index} is clicked`);
   // Your main code here.
+//   fillButton(index, "X");
+//   fillButton(index, "O");
+//   if (fillButton === "X") {
+//   fillButton = "O";}
+// else {
+//   fillButton = "X";}
+
+}
+
+function counter() {
+  for (let i = 1; i <= 9; i++) {
+    if(i % 2 == 1) {
+      text = "X";
+    } else {
+      text = "O";
+    }
+  }
 }
 
 /**
