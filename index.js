@@ -14,8 +14,8 @@ function winningAlert(winner) {
 
 // SAMPLE CODE: This code fills the 1st and 9th button with X and O initially
 // ❗️ Delete this code once you are done testing
-fillButton(1, "X");
-fillButton(9, "O");
+// fillButton(1, "X");
+// fillButton(9, "O");
 
 /**
  *
@@ -24,45 +24,172 @@ fillButton(9, "O");
  * Add your code here, since this is going to be your main function
  * That interacts with the UI
  */
-let gameReset = ["", "", "", "", "", "", "", "", ""];
 
-const winningBlocks = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-  [1, 4, 7],
-  [2, 5, 8],
-  [3, 6, 9],
-  [1, 5, 9],
-  [3, 5, 7]
-];
+let isGameOver = false;
 
-function alertMsg() {
-  if (winningBlocks )
-}
-
+let counter = 1
 function clickButton(index) {
-  console.log(`Button number ${index} is clicked`);
-  // Your main code here.
-//   fillButton(index, "X");
-//   fillButton(index, "O");
-//   if (fillButton === "X") {
-//   fillButton = "O";}
-// else {
-//   fillButton = "X";}
+  
+  if(document.getElementById(`${index}`).innerHTML == "" ){
 
-}
-
-function counter() {
-  for (let i = 1; i <= 9; i++) {
-    if(i % 2 == 1) {
-      text = "X";
+    if (counter % 2 === 0 ) {
+      
+      fillButton (index, "O") ;
+      
     } else {
-      text = "O";
+      fillButton(index, "X");
     }
+    counter++
+  }else{
+    console.log("I AM NOT EMPTY YOU CANT CLICK MEEEEE!!")
   }
+  if(isGameOver == true) {
+    winningAlert("X")
+  }
+
+checkWinner();
 }
 
+function checkWinner() {
+
+  const winningBlocks = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [1, 4, 7],
+    [2, 5, 8],
+    [3, 6, 9],
+    [1, 5, 9],
+    [3, 5, 7]
+  ];
+
+  if (
+document.getElementById(winningBlocks[0][0]).innerHTML == "X" &&
+document.getElementById(winningBlocks[0][1]).innerHTML == "X" &&
+document.getElementById(winningBlocks[0][2]).innerHTML == "X" ) 
+{ 
+  isGameOver = true
+
+} else if (
+document.getElementById(winningBlocks[1][0]).innerHTML == "X" &&
+document.getElementById(winningBlocks[1][1]).innerHTML == "X" &&
+document.getElementById(winningBlocks[1][2]).innerHTML == "X" )  
+{
+  isGameOver = true
+
+} else if(
+document.getElementById(winningBlocks[2][0]).innerHTML == "X" &&
+document.getElementById(winningBlocks[2][1]).innerHTML == "X" &&
+document.getElementById(winningBlocks[2][2]).innerHTML == "X" ) 
+{ 
+  isGameOver = true
+
+} else if (
+document.getElementById(winningBlocks[3][0]).innerHTML == "X" &&
+document.getElementById(winningBlocks[3][1]).innerHTML == "X" &&
+document.getElementById(winningBlocks[3][2]).innerHTML == "X" ) 
+{ 
+  isGameOver = true
+
+} else if (
+document.getElementById(winningBlocks[3][0]).innerHTML == "X" &&
+document.getElementById(winningBlocks[3][1]).innerHTML == "X" &&
+document.getElementById(winningBlocks[3][2]).innerHTML == "X" ) 
+{ 
+  isGameOver = true
+
+} else if (
+document.getElementById(winningBlocks[4][0]).innerHTML == "X" &&
+document.getElementById(winningBlocks[4][1]).innerHTML == "X" &&
+document.getElementById(winningBlocks[4][2]).innerHTML == "X" ) 
+{ 
+  isGameOver = true
+
+} else if (
+document.getElementById(winningBlocks[5][0]).innerHTML == "X" &&
+document.getElementById(winningBlocks[5][1]).innerHTML == "X" &&
+document.getElementById(winningBlocks[5][2]).innerHTML == "X" ) 
+{ 
+  isGameOver = true
+
+} else if (
+document.getElementById(winningBlocks[6][0]).innerHTML == "X" &&
+document.getElementById(winningBlocks[6][1]).innerHTML == "X" &&
+document.getElementById(winningBlocks[6][2]).innerHTML == "X" ) 
+{ 
+  isGameOver = true
+
+} else if (
+document.getElementById(winningBlocks[7][0]).innerHTML == "X" &&
+document.getElementById(winningBlocks[7][1]).innerHTML == "X" &&
+document.getElementById(winningBlocks[7][2]).innerHTML == "X" ) 
+{ 
+  isGameOver = true
+
+} else if (
+  document.getElementById(winningBlocks[0][0]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[0][1]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[0][2]).innerHTML == "O" ) 
+{ 
+  isGameOver = true
+
+} else if (
+  document.getElementById(winningBlocks[1][0]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[1][1]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[1][2]).innerHTML == "O" ) 
+{
+  isGameOver = true
+
+} else if(
+  document.getElementById(winningBlocks[2][0]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[2][1]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[2][2]).innerHTML == "O" ) 
+{ 
+  isGameOver = true
+
+} else if (
+  document.getElementById(winningBlocks[3][0]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[3][1]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[3][2]).innerHTML == "O" ) 
+{ 
+  isGameOver = true
+
+} else if (
+  document.getElementById(winningBlocks[3][0]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[3][1]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[3][2]).innerHTML == "O" ) 
+{ 
+  isGameOver = true
+
+} else if (
+  document.getElementById(winningBlocks[4][0]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[4][1]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[4][2]).innerHTML == "O" ) 
+{ 
+  isGameOver = true
+
+} else if (
+  document.getElementById(winningBlocks[5][0]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[5][1]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[5][2]).innerHTML == "O" ) 
+{ 
+  isGameOver = true
+
+} else if (
+  document.getElementById(winningBlocks[6][0]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[6][1]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[6][2]).innerHTML == "O" ) 
+{ 
+  isGameOver = true
+
+} else if (
+  document.getElementById(winningBlocks[7][0]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[7][1]).innerHTML == "O" &&
+  document.getElementById(winningBlocks[7][2]).innerHTML == "O" ) 
+{ 
+  isGameOver = true
+ }
+}
 /**
  * (Optional) It's always a good idea to make a function for every single purpose.
  */
